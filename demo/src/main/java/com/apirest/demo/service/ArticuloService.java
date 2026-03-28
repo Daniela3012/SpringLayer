@@ -43,4 +43,19 @@ public class ArticuloService {
         responseArticuloDTO.setUrl(articulo.getUrl());
         return responseArticuloDTO;
     }
+
+    public ResponseArticuloDTO findById (UUID id) {
+        Optional<ArticuloEntity> articuloEntityOptional = articuloRepository.findById(id);
+        if (articuloEntityOptional.isEmpty()) {
+            return null;
+        }
+        ArticuloEntity articulo = articuloEntityOptional.get();
+        ResponseArticuloDTO articuloDTO = new ResponseArticuloDTO();
+        articuloDTO.setId(articulo.getId());
+        articuloDTO.setContenido(articulo.getContenido());
+        articuloDTO.setUrl(articulo.getUrl());
+
+        return articuloDTO;
+
+    }
 }

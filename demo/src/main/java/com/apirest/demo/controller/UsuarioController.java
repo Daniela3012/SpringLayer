@@ -3,10 +3,9 @@ package com.apirest.demo.controller;
 import com.apirest.demo.dto.UsuarioCreateDTO;
 import com.apirest.demo.dto.UsuarioResponseDTO;
 import com.apirest.demo.service.UsuarioService;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/v1/usuario")
@@ -20,5 +19,10 @@ public class UsuarioController {
     @PostMapping("/save")
     public UsuarioResponseDTO saveUsuario(@RequestBody UsuarioCreateDTO dto) {
         return usuarioService.saveUsuario(dto);
+    }
+
+    @GetMapping("/find/{id}")
+    public UsuarioResponseDTO findById (@PathVariable UUID id) {
+        return usuarioService.findById(id);
     }
 }
