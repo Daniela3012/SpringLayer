@@ -24,7 +24,6 @@ public class ArticuloService {
     public ResponseArticuloDTO createArticulo (CreateArticuloDTO dto) {
         UUID idUsuario = dto.getUsuarioId();
         Optional<UsuarioEntity> usuarioEntityOptional = usuarioRepository.findById(idUsuario);
-        Optional<ArticuloEntity> articuloEntityOptional = articuloRepository.findById(idUsuario);
         if (usuarioEntityOptional.isEmpty()) {
             return null;
         }

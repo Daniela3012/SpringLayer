@@ -6,6 +6,9 @@ import com.apirest.demo.entity.UsuarioEntity;
 import com.apirest.demo.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+import java.util.UUID;
+
 @Service
 public class UsuarioService {
 
@@ -29,6 +32,25 @@ public class UsuarioService {
         usuario.setDni(dto.getDni());
 
         usuarioRepository.save(usuario);
+        UsuarioResponseDTO usuarioResponseDTO = new UsuarioResponseDTO();
+        usuarioResponseDTO.setId(usuario.getId());
+        usuarioResponseDTO.setNombres(usuario.getNombres());
+        usuarioResponseDTO.setApellidos(usuario.getApellidos());
+        usuarioResponseDTO.setUsername(usuario.getUsername());
+        usuarioResponseDTO.setSexo(usuario.getSexo());
+        usuarioResponseDTO.setEmail(usuario.getEmail());
+        usuarioResponseDTO.setFechaNacimiento(usuario.getFechaNacimiento());
+        usuarioResponseDTO.setNumComentarios(0);
+
+        return usuarioResponseDTO;
+    }
+
+    public UsuarioResponseDTO findById (UUID id) {
+        Optional<UsuarioEntity> usuarioEntityOptional = usuarioRepository.findById(id);
+        if (usuarioEntityOptional.isEmpty()) {
+            return null;
+        }
+        UsuarioEntity usuario = usuarioEntityOptional.get();
         UsuarioResponseDTO usuarioResponseDTO = new UsuarioResponseDTO();
         usuarioResponseDTO.setId(usuario.getId());
         usuarioResponseDTO.setNombres(usuario.getNombres());

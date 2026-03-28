@@ -2,8 +2,6 @@ package com.apirest.demo.controller;
 
 import com.apirest.demo.dto.UsuarioCreateDTO;
 import com.apirest.demo.dto.UsuarioResponseDTO;
-import com.apirest.demo.entity.UsuarioEntity;
-import com.apirest.demo.repository.UsuarioRepository;
 import com.apirest.demo.service.UsuarioService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
