@@ -2,8 +2,8 @@ package com.apirest.demo.dto;
 
 import lombok.Getter;
 import lombok.Setter;
-
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Getter
@@ -17,4 +17,5 @@ public class UsuarioResponseDTO {
     private Date fechaNacimiento;
     private char sexo;
     private int numComentarios;
+    private List<ResponseArticuloDTO> articuloDTOS;
 }

@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -35,5 +36,6 @@ public class UsuarioEntity {
     @Column(name = "fecha_actualizacion")
     private Date fechaActualizacion;
 
-
+    @OneToMany(mappedBy = "usuario")
+    private List<ArticuloEntity> articulos;
 }
