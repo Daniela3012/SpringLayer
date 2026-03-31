@@ -5,8 +5,10 @@ import com.apirest.demo.dto.UsuarioCreateDTO;
 import com.apirest.demo.dto.UsuarioResponseDTO;
 import com.apirest.demo.entity.ArticuloEntity;
 import com.apirest.demo.entity.UsuarioEntity;
+import com.apirest.demo.feingclient.ReniecClient;
 import com.apirest.demo.repository.UsuarioRepository;
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -19,13 +21,24 @@ public class UsuarioService {
 
     private final UsuarioRepository usuarioRepository;
     private final ModelMapper modelMapper;
+    private final ReniecClient reniecClient;
+    @Value("${apiToken}")
+    private String apiToken;
 
-    public UsuarioService(UsuarioRepository usuarioRepository, ModelMapper modelMapper) {
+    public UsuarioService(UsuarioRepository usuarioRepository, ModelMapper modelMapper, ReniecClient reniecClient) {
         this.usuarioRepository = usuarioRepository;
         this.modelMapper = modelMapper;
+        this.reniecClient = reniecClient;
     }
 
     public UsuarioResponseDTO saveUsuario(UsuarioCreateDTO dto) {
+        String dni = dto.getDni();
+        if (dni.length() == 8 && dni.matches("^\\d+$^")) {
+            return null;
+        }
+
+        reniecClient.getPersonaInfo(dni,apiToken);
+
         dto.setNombres(dto.getNombres().toUpperCase());
         dto.setApellidos(dto.getApellidos().toUpperCase());
 
