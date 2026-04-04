@@ -10,13 +10,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 import java.util.UUID;
+
 @Service
 public class ArticuloService {
     private final ArticuloRepository articuloRepository;
     private final UsuarioRepository usuarioRepository;
 
     public ArticuloService(ArticuloRepository articuloRepository, UsuarioRepository usuarioRepository) {
-
         this.articuloRepository = articuloRepository;
         this.usuarioRepository = usuarioRepository;
     }
