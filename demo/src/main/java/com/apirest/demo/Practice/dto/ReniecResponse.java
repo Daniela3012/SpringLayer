@@ -1,4 +1,4 @@
-package com.apirest.demo.dto;
+package com.apirest.demo.Practice.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.Column;

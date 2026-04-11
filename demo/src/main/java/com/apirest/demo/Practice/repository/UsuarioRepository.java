@@ -1,8 +1,6 @@
-package com.apirest.demo.repository;
+package com.apirest.demo.Practice.repository;
 
-import com.apirest.demo.dto.UsuarioCreateDTO;
-import com.apirest.demo.entity.ArticuloEntity;
-import com.apirest.demo.entity.UsuarioEntity;
+import com.apirest.demo.Practice.entity.UsuarioEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -1,13 +1,10 @@
-package com.apirest.demo.service;
+package com.apirest.demo.Practice.service;
 
-import com.apirest.demo.dto.CategoriaCreateDTO;
-import com.apirest.demo.dto.CategoriaResponseDTO;
-import com.apirest.demo.dto.UsuarioResponseDTO;
-import com.apirest.demo.entity.CategoriaEntity;
-import com.apirest.demo.entity.UsuarioEntity;
-import com.apirest.demo.repository.CategoriaRepository;
+import com.apirest.demo.Practice.dto.CategoriaCreateDTO;
+import com.apirest.demo.Practice.dto.CategoriaResponseDTO;
+import com.apirest.demo.Practice.entity.CategoriaEntity;
+import com.apirest.demo.Practice.repository.CategoriaRepository;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 @Service

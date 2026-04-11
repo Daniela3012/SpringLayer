@@ -1,11 +1,11 @@
-package com.apirest.demo.service;
+package com.apirest.demo.Practice.service;
 
-import com.apirest.demo.dto.CreateArticuloDTO;
-import com.apirest.demo.dto.ResponseArticuloDTO;
-import com.apirest.demo.entity.ArticuloEntity;
-import com.apirest.demo.entity.UsuarioEntity;
-import com.apirest.demo.repository.ArticuloRepository;
-import com.apirest.demo.repository.UsuarioRepository;
+import com.apirest.demo.Practice.dto.CreateArticuloDTO;
+import com.apirest.demo.Practice.dto.ResponseArticuloDTO;
+import com.apirest.demo.Practice.entity.ArticuloEntity;
+import com.apirest.demo.Practice.entity.UsuarioEntity;
+import com.apirest.demo.Practice.repository.ArticuloRepository;
+import com.apirest.demo.Practice.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;

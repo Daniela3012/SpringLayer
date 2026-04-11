@@ -1,4 +1,4 @@
-package com.apirest.demo.entity;
+package com.apirest.demo.Practice.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

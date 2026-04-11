@@ -1,8 +1,8 @@
-package com.apirest.demo.controller;
+package com.apirest.demo.Practice.controller;
 
-import com.apirest.demo.dto.UsuarioCreateDTO;
-import com.apirest.demo.dto.UsuarioResponseDTO;
-import com.apirest.demo.service.UsuarioService;
+import com.apirest.demo.Practice.dto.UsuarioCreateDTO;
+import com.apirest.demo.Practice.dto.UsuarioResponseDTO;
+import com.apirest.demo.Practice.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;

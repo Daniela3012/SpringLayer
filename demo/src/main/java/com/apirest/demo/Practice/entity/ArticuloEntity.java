@@ -1,4 +1,4 @@
-package com.apirest.demo.entity;
+package com.apirest.demo.Practice.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -23,7 +23,7 @@ public class ArticuloEntity {
     private Date fechaActualizacion;
     private String url;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name="usuario_id_fk")
     private UsuarioEntity usuario;
 

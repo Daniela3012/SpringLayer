@@ -1,6 +1,6 @@
-package com.apirest.demo;
+package com.apirest.demo.Practice;
 
-import com.apirest.demo.entity.ArticuloEntity;
+import com.apirest.demo.Practice.entity.ArticuloEntity;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

@@ -1,12 +1,12 @@
-package com.apirest.demo.service;
+package com.apirest.demo.Practice.service;
 
-import com.apirest.demo.dto.ResponseArticuloDTO;
-import com.apirest.demo.dto.UsuarioCreateDTO;
-import com.apirest.demo.dto.UsuarioResponseDTO;
-import com.apirest.demo.entity.ArticuloEntity;
-import com.apirest.demo.entity.UsuarioEntity;
-import com.apirest.demo.feingclient.ReniecClient;
-import com.apirest.demo.repository.UsuarioRepository;
+import com.apirest.demo.Practice.dto.ResponseArticuloDTO;
+import com.apirest.demo.Practice.dto.UsuarioCreateDTO;
+import com.apirest.demo.Practice.dto.UsuarioResponseDTO;
+import com.apirest.demo.Practice.entity.ArticuloEntity;
+import com.apirest.demo.Practice.entity.UsuarioEntity;
+import com.apirest.demo.Practice.feingclient.ReniecClient;
+import com.apirest.demo.Practice.repository.UsuarioRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

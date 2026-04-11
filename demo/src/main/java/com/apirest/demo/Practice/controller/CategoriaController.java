@@ -1,8 +1,8 @@
-package com.apirest.demo.controller;
+package com.apirest.demo.Practice.controller;
 
-import com.apirest.demo.dto.CategoriaCreateDTO;
-import com.apirest.demo.dto.CategoriaResponseDTO;
-import com.apirest.demo.service.CategoriaService;
+import com.apirest.demo.Practice.dto.CategoriaResponseDTO;
+import com.apirest.demo.Practice.dto.CategoriaCreateDTO;
+import com.apirest.demo.Practice.service.CategoriaService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

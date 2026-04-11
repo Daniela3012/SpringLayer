@@ -1,13 +1,10 @@
-package com.apirest.demo.dto;
+package com.apirest.demo.Practice.dto;
 
-import com.apirest.demo.entity.ArticuloEntity;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.ArrayList;
 import java.util.UUID;
 
 @Getter
